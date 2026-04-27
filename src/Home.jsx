@@ -12,6 +12,8 @@ const Home = () => {
    <Teacher name='ram' age={33} />
    <button onClick={()=>navigate('/counter')}> Counter</button>
    <button onClick={()=>navigate('/useEffect')}>useEffect</button>
+   <button onClick={()=> navigate('/useRef')} >useRef</button>
+   <button onClick={()=>navigate('/grand')}>UseContext</button>
    </div>
   )
 }
