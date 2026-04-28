@@ -14,6 +14,8 @@ const Home = () => {
    <button onClick={()=>navigate('/useEffect')}>useEffect</button>
    <button onClick={()=> navigate('/useRef')} >useRef</button>
    <button onClick={()=>navigate('/grand')}>UseContext</button>
+   <button onClick={()=>navigate('/classComponent')}>ClassComponent</button>
+   <button onClick={()=>navigate('/todo')}>TodoList</button>
    </div>
   )
 }

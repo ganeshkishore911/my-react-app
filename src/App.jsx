@@ -7,7 +7,12 @@ import UseRef from './components/UseRef'
 import Home from './Home'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import { toggleTheme,setText ,name,increament,decreament, reset} from './themeSlice'
+import ClassComponent from './components/ClassComponent'
+import Todo from './Todo-List /Todo'
+import withExtra from './Hoc/withExtra'
+import Hello from './components/Hello'
 
+const NewComponent=withExtra(Hello)
 function App() {
 const mode=useSelector((state)=>state.theme.mode) // get the current theme from the store
 const text=useSelector((state)=>state.theme.text)
@@ -17,6 +22,7 @@ const dispatch=useDispatch()
 console.log(text)
   return (
    <> 
+   <NewComponent name='kishore'/>
   <div
       style={{
         backgroundColor: mode === "light" ? "#fff" : "#333",
@@ -45,6 +51,8 @@ console.log(text)
   <Route path='/useEffect' element={<UseEffectDemo/>}/>
   <Route path='/useRef' element={<UseRef/>} />
   <Route path='/grand' element={<Grand/>}/>
+  <Route path='/classComponent' element={< ClassComponent/>}/>
+  <Route path='/todo'element={< Todo/>}/>
 </Routes>
 </BrowserRouter>
    </>
